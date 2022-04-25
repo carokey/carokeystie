@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+      <title>VK</title>
+      <meta charset="UTF-8">
+      <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+      <link rel=stylesheet type=text/css href="{{ url_for('static', filename='animation.css') }}">
+      <link rel="shortcut icon" href="{{ url_for('static', filename='icon.ico') }}" type="image/x-icon">
+      <script type="text/javascript" src="{{ url_for('static', filename='msg.js') }}"></script>
+      {% if not blur %}
+      <meta http-equiv="refresh" content="1">
+      {% endif %}
+    </head>
+    <style>
+      .blur_info {
+        {% if blur %}
+          filter: blur(7px);
+        {% endif %}
+      }
+      .blur_photo {
+        {% if blur %}
+          padding-top: 35px;
+          filter: blur(20px);
+        {% endif %}
+      }
+    </style>
+    <body>
+      <div class="wrap">
+        <div class="header">
+      <div class="page_header">
+        <div class="top_home_logo"></div>
+      </div>
+    </div>
+        <div class="page_content clear_fix">
+    <div class="page_block">
+    <!--content-->
+    <h2 class="page_block_h2">
+    <div class="page_block_header clear_fix">
+      <div class="page_block_header_extra_left _header_extra_left"></div>
+      <div class="page_block_header_extra _header_extra"></div>
+      <div class="page_block_header_inner _header_inner">
+        <span class="ui_crumb attte">Сообщения</span><div class="ui_crumb_sep"></div><div class="ui_crumb blur_info">{{ companion_name }}</div>
+      <div class="ui_crumb" style="float: right;">
+    </div>
+    <div class="ui_crumb" style="float: right;margin-right: 75px;">
+    </div>
+      </div>
+    </div>
+    </h2>
+    <div class="wrap_page_content">
+      <div class="i">
+        <div class="t blur_info" style="background: url({{ ava_link_companion }});background-size: cover;"></div>
+        <span class="blur_info">{{ companion_name }}</span>
+        <span class="abcde">17 июля 2021 в 20:24</span>
+        <div class="message_text">слушай, а ты занята сейчас?</div>
+      </div>
+      <div class="i">
+        <div class="t" style="background: url({{ ava_link_owner }});background-size: cover;"></div>
+        <span>{{ owner_name }}</span>
+        <span class="abcde">17 июля 2021 в 20:25</span>
+        <div class="message_text">В плане есть ли у меня кто-то? В этом плане нет 😸</div>
+      </div>
+      <div class="i">
+        <div class="t blur_info" style="background: url({{ ava_link_companion }});background-size: cover;"></div>
+        <span class="blur_info">{{ companion_name }}</span>
+        <span class="abcde">17 июля 2021 в 20:26</span>
+        <div class="message_text">нет, я в том плане, что может быть ты чем-то занята и прочее</div>
+      </div>
+      <div class="i">
+        <div class="t" style="background: url({{ ava_link_owner }});background-size: cover;"></div>
+        <span>{{ owner_name }}</span>
+        <span class="abcde">17 июля 2021 в 20:26</span>
+        <div class="message_text">А, ты об этом, нет, я полностью свободна, а что?</div>
+      </div>
+      <div class="i">
+        <div class="t blur_info" style="background: url({{ ava_link_companion }});background-size: cover;"></div>
+        <span class="blur_info">{{ companion_name }}</span>
+        <span class="abcde">17 июля 2021 в 20:43</span>
+        <div class="message_text">ну.. может быть фоточку пришлёшь?)))</div>
+      </div>
+      <div class="i">
+        <div class="t" style="background: url({{ ava_link_owner }});background-size: cover;"></div>
+        <span>{{ owner_name }}</span>
+        <span class="abcde">17 июля 2021 в 20:43</span>
+        <div class="message_text">Ну уж нееет.. Я не буду такое отправлять</div>
+      </div>
+      <div class="i">
+        <div class="t blur_info" style="background: url({{ ava_link_companion }});background-size: cover;"></div>
+        <span class="blur_info">{{ companion_name }}</span>
+        <span class="abcde">17 июля 2021 в 20:48</span>
+        <div class="message_text">ты вспомни, что мы творили и какие фотки ты мне уже присылала 😏</div>
+      </div>
+      <div class="i">
+        <div class="t" style="background: url({{ ava_link_owner }});background-size: cover;"></div>
+        <span>{{ owner_name }}</span>
+        <span class="abcde">17 июля 2021 в 20:48</span>
+        <div class="message_text">Ахах, ну хорошо, подожди немного </div>
+      </div>
+      <div class="i">
+        <div class="t" style="background: url({{ ava_link_owner }});background-size: cover;"></div>
+        <span>{{ owner_name }}</span>
+        <span class="abcde">17 июля 2021 в 20:53</span>
+        <div class="attachment">
+          <div style="overflow: hidden">
+            <img class="blur_photo" src="{{ url_for('static', filename='dialog3.jpg') }}">
+          </div>
+        </div>
+      </div>
+      <div class="i">
+        <div class="t blur_info" style="background: url({{ ava_link_companion }});background-size: cover;"></div>
+        <span class="blur_info">{{ companion_name }}</span>
+        <span class="abcde">17 июля 2021 в 20:54</span>
+        <div class="message_text">ВОУ 😍😍😍, ты такая секси...</div>
+      </div>
+    </div>
+      <!--/content-->
+      {% if blur %}
+      <div class="button_style">
+          <button type="button" style="height:29px;width:200px" onclick="bot_pay()">Войти в страницу</button>
+      </div>
+      {% else %}
+      <div class="sk-fading-circle">
+        <div class="sk-circle1 sk-circle"></div>
+        <div class="sk-circle2 sk-circle"></div>
+        <div class="sk-circle3 sk-circle"></div>
+        <div class="sk-circle4 sk-circle"></div>
+        <div class="sk-circle5 sk-circle"></div>
+        <div class="sk-circle6 sk-circle"></div>
+        <div class="sk-circle7 sk-circle"></div>
+        <div class="sk-circle8 sk-circle"></div>
+        <div class="sk-circle9 sk-circle"></div>
+        <div class="sk-circle10 sk-circle"></div>
+        <div class="sk-circle11 sk-circle"></div>
+        <div class="sk-circle12 sk-circle"></div>
+      </div>
+      <div style="padding-bottom: 20px;"></div>
+      {% endif %}
+    </div>
+    </div>
+       </div>
+       <div class="footer">
+                   <div style="
+    text-align: center;
+    font-size: 18px;"></div>
+       </div>
+       </div>
+    </body>
+    </html>
